@@ -1,0 +1,158 @@
+/* google font link adres zorgt er voor dat ik daarmee connectie mee kan maken  */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+/* weg halen van onnodige margin en padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* google font text  */
+
+/* 1, viewheight gegeven van 100
+2, overflow hidden zodat het de content overneemt
+3, type text gegeven met font "Black Ops one"
+4, content in flex gezet
+5, content in het midden gezet
+6, items in het midden geplaatst
+7, text grote van 1.2em
+8, background-image oproepen met internet link michael jordan gif
+9, image was te klein dus image hele scherm laten */
+body{
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Black Ops One', cursive;
+    color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    background-image: url(https://idlesocietycouk.files.wordpress.com/2020/05/bull.gif);
+    background-size: cover;
+}
+
+
+/* 1, container een vaste width en height gegeven
+2,kaart in container geplaatst met een perspectief dat er voor zorgt dat het
+een nette 3D draai geeft 
+*/
+.container{
+    width: 400px;
+    height: 650px;
+    perspective: 600px;
+}
+
+/* 1,kaart in de container geplaatst.
+    2, omdat ik de container een vaste width en height heb gegeven kan ik kaart zelf een width en height geven van 100% en past het zich aan de width van 350px en height van 500px.
+    3. card class position relative gegeven
+    en in front en back class position absolute gegeven zodat de kaarten op elkaar liggen
+    4. transform style zorgt voor de 3animatie en dat het niet alleen de front flipt maar beiden kanten */
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+/* 1, de kaart in de container geef ik een hover effect.
+    2, met cursor pointer is de bedoeling dat als de muis op het object hangt er wat gebeurd
+    3, met transform geef ik het een rotate in de Y-as en dan draait het 180 graden */
+.container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+
+
+/* 1, begint van rood, naar yellow en dan groen */
+@keyframes example {
+    0%  {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: green;}
+}
+
+/* 1, front en back in de kaart class gezet
+    2,  de container een vaste width en height heb gegeven kan ik kaart zelf een width en height geven van 100% en past het zich aan de width van 350px en height van 500px
+    3, randjes gegeven aan de kaart van 2 rem
+    4, card class position relative gegeven
+    en in front en back class position absolute gegeven zodat de kaarten op elkaar liggen'
+    5, backface-visibility:hidden gegeven zodat het aparte kanten heeft en je de content niet 2x terug ziet
+    6, in flexbox geplaatst en in columns
+    7, content en items in het midden geplaatst
+    8,ruimte tussen de content gemaakt van 2 rem
+    9, background-color rood gegeven
+    10, animation keyframe oproepen met naam "example"
+    11, animation laten doorlopen*/
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    background-color: red;
+    animation: example 3s;
+    animation-iteration-count: infinite;
+}
+
+/* 1, img position relative gegeeven
+    2, top ruimte van 1em
+    3, width en height 10em
+    4, zwarte border gegeven van 5px
+    5, box shadow gegeven(might remove) */
+img {
+    position: relative;
+    width: 10em;
+    height: 10em;
+    border: 5px solid #121212 ;
+    border-radius: 5em;
+    
+}
+/* witte glow effect achter the text */
+h1{
+    text-shadow: 2px 2px 5px white;
+}
+
+/* text decoration op h2 en h3 gegeven om topics te highlighten */
+h2, h3{
+    text-decoration: underline;
+}
+
+/* 1, kleur gegeven
+2,transformeer object in rotatie Y-as 180graden */
+.back{
+    /* background-color: green; */
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+
+/* keyframe met naam move gaat van -20 boven naar beneden tot 0px */
+@keyframes move{
+    from {top: -20px;}
+    to {top: 0px;}
+}
+
+/* 1, position relative om object te manupuleren
+2, animation keyframe met naam "move" oproepen 
+3, animation een delay van 3sec geven
+4,animation door laten lopen */
+#emojis{ 
+    position: relative;
+    animation: move 2s;
+    animation-delay: 3s;
+    /* animation-play-state: paused 20s; */
+    /* animation-play-state: running; */
+    animation-iteration-count: infinite;
+}
+
+.CapitalRed::first-letter {
+    color: #ff0000;
+    font-size: 200%;
+}

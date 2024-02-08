@@ -1,0 +1,250 @@
+/* google font link adres zorgt er voor dat ik daarmee connectie mee kan maken  */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+:root {
+    --primary-bg-color: #60100B;
+    --mobile-bg-color: linear-gradient(#990f02 59.5%, #60100B 40.5%);
+    --tabdesk-bg-color: linear-gradient(#990f02 70%, #60100B 30%);
+    --button-bg-color: #E3242B;
+    --text-card-color: #FFFADA;
+    --mark-color: #000000;
+  }
+
+/* weg halen van onnodige margin en padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* google font text  */
+
+/* 1, viewheight gegeven van 100
+2, overflow hidden zodat het de content overneemt
+3, type text gegeven met font "Black Ops one" */
+
+body{
+    overflow: hidden;
+    font-family: 'Black Ops One', cursive;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+article {
+    background: var(--tabdesk-bg-color);
+    width: 20em;
+    height: 35em;
+    box-shadow: 0 0.2em 0.2em 0.2em var(--mark-color);
+    padding-top: 7em;
+    border-radius: 0.5em;
+}
+
+p {
+    margin-top: 1.7em;
+}
+
+figure > img{
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    position: relative;
+    top: 5em;
+    left: 0.5em;
+    border: 1px solid var(--mark-color);
+}
+
+button {
+    margin: 3em 1em 3em 0em; 
+}
+
+button:hover {
+    background: white;
+    cursor: pointer;
+}
+
+.linked-Button {
+    background-color: var(--button-bg-color);
+    width: 8em;
+    height: 3em;
+    border: 0.1em solid var(--button-bg-color);
+    border-radius: 0.5em;
+} 
+
+.github-Button {
+    color: var(--button-bg-color);
+    background-color: var(--secondary-bg-color);
+    width: 8em;
+    height: 3em;
+    border: 0.1em solid var(--button-bg-color);
+    border-radius: 0.5em;
+}
+
+svg {
+    width: 3em;
+    height: 2.5em;
+    padding-left: 0.5em;
+    padding-top: 1em;
+}
+
+ul {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0em 0.5em 0em 2em;
+}
+
+li {
+    list-style-type: none;
+    border: 0.1em solid ;
+    padding: 0.1em;
+}
+
+
+@media (min-width: 45em) {
+    article {
+        background: var(--tabdesk-bg-color);
+        width: 25em;
+        height: 35em;
+        padding-top: 7em;
+        box-shadow: 0 0.2em 0.2em 0.2em var(--mark-color);
+        margin-bottom: 2em;
+    }
+    
+    p {
+        margin-top: 0.7em;
+    }
+    
+    figure > img{
+        border-radius: 50%;
+        width: 10em;
+        height: 10em;
+        position: relative;
+        top: 5em;
+        border: 1px solid var(--mark-color);
+    }
+    
+    button {
+        margin: 4em 1em 6em 0em;
+        
+    }
+    
+    .linked-Button {
+        background-color: var(--button-bg-color);
+        width: 8em;
+        height: 3em;
+        border: 0.1em solid var(--button-bg-color);
+        border-radius: 0.5em;
+    } 
+    
+    .github-Button {
+        color: var(--button-bg-color);
+        background-color: var(--secondary-bg-color);
+        width: 8em;
+        height: 3em;
+        border: 0.1em solid var(--button-bg-color);
+        border-radius: 0.5em;
+    }
+    
+    svg {
+        width: 3em;
+        height: 2.5em;
+        padding-left: 0.5em;
+        padding-top: 1em;
+    }
+    
+    ul {
+        margin-top: 1.5em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 0em 0.5em 0em 2em;
+    }
+    
+    li {
+        list-style-type: none;
+        border: 0.1em solid ;
+        padding: 0.1em;
+    }
+}
+
+@media (min-width: 75em) {
+    article {
+        background-color: var(--secondary-bg-color);
+        width: 25em;
+        height: 35em;
+        padding-top: 7em;
+        box-shadow: 0 0.2em 0.2em 0.2em var(--mark-color);
+        margin-bottom: 2em;
+    }
+    
+    p {
+        margin-top: 0.7em;
+    }
+    
+    figure > img{
+        border-radius: 50%;
+        width: 10em;
+        height: 10em;
+        position: relative;
+        top: 5em;
+        border: 1px solid var(--mark-color);
+    }
+    
+    button {
+        margin: 5em 1em 6em 0em;
+        
+    }
+    
+    .linked-Button {
+        background-color: var(--button-bg-color);
+        width: 8em;
+        height: 3em;
+        border: 0.1em solid var(--button-bg-color);
+        border-radius: 0.5em;
+    } 
+    
+    .github-Button {
+        color: var(--button-bg-color);
+        background-color: var(--secondary-bg-color);
+        width: 8em;
+        height: 3em;
+        border: 0.1em solid var(--button-bg-color);
+        border-radius: 0.5em;
+    }
+    
+    svg {
+        width: 3em;
+        height: 2.5em;
+        padding-left: 0.5em;
+        padding-top: 1em;
+    }
+    
+    .line-break {
+        background-color: var(--mark-color);
+        border: none;
+        height: 0.1em;
+        margin-top: 4em;
+    }
+    
+    ul {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 0em 0.5em 0em 2em;
+    }
+    
+    li {
+        list-style-type: none;
+        border: 0.1em solid ;
+        padding: 0.1em;
+    }
+}
